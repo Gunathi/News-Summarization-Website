@@ -1,0 +1,7 @@
+django
+mysql-connector-python
+mysqlclient
+pip3 install torch torchvision torchaudio
+transformers
+sentencepiece
+protobuf
