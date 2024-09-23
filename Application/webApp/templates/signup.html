@@ -1,0 +1,111 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" data-theme="light" lang="en">
+
+<!--Start Head-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sign UP - Echo Express</title>
+    <link rel="icon" type="image/png" href="../../../static/img/favicon/logo_black.png">
+    <meta name="author" content="Tnews">
+    <meta name="description" content="Tnews - News & Magazine HTML Template">
+    <meta name="keywords" content="Tnews - News & Magazine HTML Template">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/app.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
+</head>
+<!--End Head-->
+
+<!--Start Body -->
+<body>
+
+<!--    Start Preloader-->
+<div class="preloader"><button class="th-btn preloaderCls">Cancel Preloader</button>
+    <div class="preloader-inner"><span class="loader"></span></div>
+</div>
+<!--    end Preloader-->
+
+<!--Start Content-->
+<section class="space">
+    <div class="containerS">
+        <div class="row">
+            <div class="col-xl-6 mt-4 mt-xl-0">
+                <div class="dark-theme img-overlay2">
+                    <div class="blog-style3">
+                        <div class="signup">
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <p id="error-message" style="color: red;">{{ message }}</p>
+                                {% endfor %}
+                            {% endif %}
+                            <div class="signup-logo">
+                                <a href="{% url 'summarize' %}"><img src="{% static 'img/icon/logo_white.png' %}" alt="Logo" class="align-middle"></a>
+                            </div>
+                            <div class="content">
+                                <h1 class="signup-h1">Create Your <span>Echo Express</span> Account</h1>
+                                        <form onsubmit="return validateForm()" action="{% url 'signup' %}" method="POST">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <label for="username" style="text-align: left">User Name</label><input type="text" id="username" name="username" placeholder="Enter User Name">
+                                            </div>
+                                                <div class="form-group">
+                                                    <label for="email" style="text-align: left">Email Address</label><input type="email" id="email" name="email" placeholder="Enter Email">
+                                                </div>
+                                            <div class="form-group">
+                                                <label for="password" style="text-align: left">Password</label>
+                                            <div class="password-input-container">
+                                                <input type="password" id="password" name="password" placeholder="Password" required>
+                                                 <span class="password-toggle" onclick="togglePasswordVisibility()"><i class="fas fa-eye" id="toggleIcon"></i>
+                                                </span>
+                                            </div>
+                                            <small id="passwordHelp" class="form-text text-muted" style="text-align: left";>
+                                                  <ul>
+                                                    <li>Minimum 8 characters</li>
+                                                    <li>At least one uppercase letter</li>
+                                                    <li>At least one number or special character</li>
+                                                  </ul>
+                                            </small>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="confirmPassword"></label>
+                                                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm Password">
+                                                <span id="passwordMatchError" class="error"></span>
+                                            </div>
+                                            <div class="form-group form-check">
+                                                <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
+                                                <label for="terms" class="form-check-label" style="text-align: left">I accept the Terms of Use & Privacy Policy</label>
+                                            </div>
+                                                <button type="submit" class="btn btn-success">Sign Up</button>
+                                        </form>
+                                        <p>Already have an account? <a href="{% url 'signin' %}" style="color:#46a049">Log in</a></p>
+                                        <div class="copyright">
+                                          <p>Copyright © 2024 News.com</p>
+                                        </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Content-->
+
+<!--    Java Scripts -->
+<script src="{% static 'js/vendor/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'js/app.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+<!--End Body -->
+</html>

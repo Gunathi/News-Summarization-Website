@@ -1,0 +1,426 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" data-theme="light" lang="en">
+
+<!--Start Head-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>About Us - Echo Express</title>
+    <link rel="icon" type="image/png" href="{% static 'img/favicon/logo_black.png' %}">
+    <meta name="author" content="Tnews">
+    <meta name="description" content="Tnews - News & Magazine HTML Template">
+    <meta name="keywords" content="Tnews - News & Magazine HTML Template">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+          <link rel="stylesheet" href="{% static 'css/app.min.css' %}">
+          <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+          <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<!--End Head-->
+
+<!--Start Body -->
+<body>
+
+<!--    Start Preloader-->
+<div class="preloader"><button class="th-btn preloaderCls">Cancel Preloader</button>
+    <div class="preloader-inner"><span class="loader"></span></div>
+</div>
+<!--    end Preloader-->
+
+<!--Start sidemenu-wrapper-->
+<div class="sidemenu-wrapper sidemenu-1 d-none d-md-block">
+    <div class="sidemenu-content"><button class="closeButton sideMenuCls"><i class="fa-regular fa-circle-xmark"></i></i></button>
+        <div class="widget">
+            <div class="th-widget-about">
+                <div class="about-logo"><a href="{% url 'summarize' %}"><img class="light-img"
+                                                                           src="{% static 'img/icon/logo_black.png' %}" alt="Echo Express"></a><a
+                        href="{% url 'summarize' %}"><img class="dark-img" src="{% static 'img/icon/logo_white.png' %}"
+                                                        alt="Echo Express"></a></div>
+                <p class="about-text">Magazines cover a wide subjects, including not limited to fashion, lifestyle,
+                    health, politics, business, Editorial, sports, science,</p>
+                <div class="th-social style-black">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a></div>
+            </div>
+        </div>
+        
+        <div class="widget newsletter-widget">
+            <h3 class="widget_title">Subscribe</h3>
+            <p class="footer-text">Sign up to get update about us. Don't be hesitate your email is safe.</p>
+            <form class="newsletter-form"><input class="form-control" type="email" placeholder="Enter Email"
+                                                 required=""> <button type="submit" class="icon-btn"><i
+                    class="fa-solid fa-paper-plane"></i></button></form>
+            <div class="mt-30"><input type="checkbox" id="Agree2"> <label for="Agree2">I have read and accept the <a
+                    href="{% url 'about' %}">Terms & Policy</a></label></div>
+        </div>
+    </div>
+</div>
+<!--end sidemenu-wrapper-->
+
+<!--Start PopUp Search Box-->
+<div class="popup-search-box"><button class="searchClose"><i class="fal fa-times"></i></button>
+    <form action="#"><input type="text" placeholder="What are you looking for?"> <button type="submit"><i
+            class="fal fa-search"></i></button></form>
+</div>
+<!--End PopUp Search Box-->
+
+<!--start menu-wrapper-->
+<div class="th-menu-wrapper">
+    <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+        <div class="mobile-logo"><a href="{% url 'summarize' %}"><img src="{% static 'img/icon/logo_black.png' %}" alt="Echo Express"></a></div>
+        <div class="th-mobile-menu">
+            <ul>
+                <a href="{% url 'summarize' %}">Home</a>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li class="menu-item-has-children"><a href="#">Category</a>
+                    <ul class="sub-menu">
+                        <li><a href="{% url 'lifestyle' %}">Lifestyle</a></li>
+                        <li><a href="{% url 'sports' %}">Sports</a></li>
+                        <li><a href="{% url 'editorial' %}">Editorial</a></li>
+                        <li><a href="{% url 'politics' %}">Politics</a></li>
+                        <li><a href="{% url 'business' %}">Business</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--end menu-wrapper-->
+
+<!--start header-->
+<header class="th-header header-layout1">
+    <div class="header-top">
+        <!--Start Header bar-->
+        <div class="container">
+            <div class="row justify-content-center justify-content-lg-between align-items-center gy-2">
+                <div class="col-auto d-none d-lg-block">
+                    <div class="header-links">
+                        <ul>
+                            <li><img
+                                    class="light-img" src="{% static 'img/icon/logo_black.png' %}" alt="ads"> <img
+                                    class="dark-img" src="{% static 'img/icon/logo_white.png' %}" alt="ads"></li>
+                            <li><i class="fa-solid fa-calendar-days"></i><a href="#">{{ date }}</a></li>
+                            <li><a class="theme-toggler" href="#"><span class="dark"><i class="fa-regular fa-sun"></i>Dark
+                                            Mode</span> <span class="light"><i class="fa-solid fa-sun"></i>Light
+                                            Mode</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="header-links">
+                        <ul>
+                            {% if user.is_authenticated %}
+                            <li class="d-none d-sm-inline-block"><i class="far fa-user"></i>Welcome, {{ user.username }}!</li>
+                            <li class="d-none d-sm-inline-block"><a  href="{% url 'signin' %}">Log Out</a></li>
+                            {% else %}
+                            <li class="d-none d-sm-inline-block"><i class="far fa-user"></i><a  href="{% url 'signin' %}">Login / register</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End header bar-->
+    </div>
+
+
+    <!--start nav bar-->
+    <div class="sticky-wrapper">
+        <div class="menu-area">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-auto d-lg-none d-block">
+                        <div class="header-logo"><a href="{% url 'summarize' %}"><img src="{% static 'img/icon/logo_white.png' %}"
+                                                                                    alt="Echo Express"></a></div>
+                    </div>
+                    <div class="col-auto">
+                        <nav class="main-menu d-none d-lg-inline-block">
+                            <ul>
+                                <li><a href="{% url 'summarize' %}">Home</a></li>
+                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                <li class="menu-item-has-children"><a href="#">Category</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'lifestyle' %}">Lifestyle</a></li>
+                                        <li><a href="{% url 'sports' %}">Sports</a></li>
+                                        <li><a href="{% url 'editorial' %}">Editorial</a></li>
+                                        <li><a href="{% url 'politics' %}">Politics</a></li>
+                                        <li><a href="{% url 'business' %}">Business</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-auto">
+                        <div class="header-button">
+                            <div class="header-button">
+                                <a href="#" class="icon-btn sideMenuToggler d-none d-lg-block">
+                                    <i class="fa-solid fa-bars"></i>
+                                </a>
+                                <button type="button" class="th-menu-toggle d-block d-lg-none">
+                                    <i class="far fa-bars"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End nav bar-->
+
+</header>
+<!--end header-->
+
+<!--Start breadcumb wrapper-->
+    <div class="breadcumb-wrapper">
+        <div class="container">
+            <ul class="breadcumb-menu">
+                <li><a href="{% url 'summarize' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+<!--End breadcumb wrapper-->
+
+<!--Start Content-->
+    <div class="space2" id="about-sec">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-7 mb-30 mb-xl-0">
+                    <div class="img-box1">
+                        <div class="img1"><img src="{% static 'img/Echo Express About us.jpg' %}" alt="About"></div>
+                    </div>
+                </div>
+                <div class="col-xl-5">
+                    <div class="title-area mb-32"><span class="sub-title" style="font-size: 40px; margin-bottom: 60px">About Us</span>
+                        <h2 class="sec-title2">Our Mission</h2>
+                        <p class="sec-text">Our mission is to empower individuals with easy access to the most relevant and impactful news, by aggregating content from diverse sources, summarizing it into concise and insightful narratives, and recommending stories that align with users' interests. We strive to keep our audience informed, engaged, and connected with the world around them, ensuring they spend less time searching for news and more time understanding it. </p>
+                            
+                        <h2 class="sec-title3">Our Vision</h2>
+                        <p class="sec-text">Our vision is to be the go-to platform for personalized news consumption, where users can effortlessly discover, digest, and stay updated on the topics that matter most to them. We aim to revolutionize the way news is consumed by combining cutting-edge technology with user-centric design, making informed, empowered, and connected individuals the norm in an ever-evolving digital landscape.</p>
+                    </div>
+                </div>
+                <div class="col-xl-12" style="margin-top: 50px;"></div>
+                <div class="col-xl-12">
+                    <div class="our-teams-section">
+                        <h2 class="sec-title4" style="margin-bottom: 20px;">Our Teams</h2>
+                        <section class="space">
+                            <div class="container">
+                                <div class="row gy-30">
+                                    <div class="col-sm-6 col-lg-4 col-xl-4">
+                                        <div class="team-card">
+                                            <div class="box-img"><img src="{% static 'img/hansani.jpg' %}" alt="Team">
+                                                <div class="th-social"><a target="_blank" href="https://facebook.com/"><i
+                                                        class="fab fa-facebook-f"></i></a> <a target="_blank" href="https://twitter.com/"><i
+                                                        class="fab fa-twitter"></i></a> <a target="_blank" href="https://instagram.com/"><i
+                                                        class="fab fa-instagram"></i></a> <a target="_blank" href="https://linkedin.com/"><i
+                                                        class="fab fa-linkedin-in"></i></a></div>
+                                            </div>
+                                            <h3 class="box-title"><a href="#">Hansani Gunathilaka</a></h3>
+                                            <p class="box-text">Group Leader</p></div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4 col-xl-4">
+                                        <div class="team-card">
+                                            <div class="box-img"><img src="{% static 'img/supuni.jpg' %}" alt="Team">
+                                                <div class="th-social"><a target="_blank" href="https://facebook.com/"><i
+                                                        class="fab fa-facebook-f"></i></a> <a target="_blank" href="https://twitter.com/"><i
+                                                        class="fab fa-twitter"></i></a> <a target="_blank" href="https://instagram.com/"><i
+                                                        class="fab fa-instagram"></i></a> <a target="_blank" href="https://linkedin.com/"><i
+                                                        class="fab fa-linkedin-in"></i></a></div>
+                                            </div>
+                                            <h3 class="box-title"><a href="#">Supuni Punsarani</a></h3>
+                                            <p class="box-text">Group Member</p></div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4 col-xl-4">
+                                        <div class="team-card">
+                                            <div class="box-img"><img src="{% static 'img/ransika.jpg' %}" alt="Team">
+                                                <div class="th-social"><a target="_blank" href="https://facebook.com/"><i
+                                                        class="fab fa-facebook-f"></i></a> <a target="_blank" href="https://twitter.com/"><i
+                                                        class="fab fa-twitter"></i></a> <a target="_blank" href="https://instagram.com/"><i
+                                                        class="fab fa-instagram"></i></a> <a target="_blank" href="https://linkedin.com/"><i
+                                                        class="fab fa-linkedin-in"></i></a></div>
+                                            </div>
+                                            <h3 class="box-title"><a href="#">Ransika Dewmini</a></h3>
+                                            <p class="box-text">Group Member</p></div>
+                                    </div>
+                                </div>
+
+                                <div class="row gy-30">
+                                    <div class="col-sm-6 col-lg-4 col-xl-4">
+                                        <div class="team-card">
+                                            <div class="box-img"><img src="{% static 'img/kusal.jpg' %}" alt="Team">
+                                                <div class="th-social"><a target="_blank" href="https://facebook.com/"><i
+                                                        class="fab fa-facebook-f"></i></a> <a target="_blank" href="https://twitter.com/"><i
+                                                        class="fab fa-twitter"></i></a> <a target="_blank" href="https://instagram.com/"><i
+                                                        class="fab fa-instagram"></i></a> <a target="_blank" href="https://linkedin.com/"><i
+                                                        class="fab fa-linkedin-in"></i></a></div>
+                                            </div>
+                                            <h3 class="box-title"><a href="#">Kusal Ransara</a></h3>
+                                            <p class="box-text">Group Member</p></div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4 col-xl-4">
+                                        <div class="team-card">
+                                            <div class="box-img"><img src="{% static 'img/gautham.jpg' %}" alt="Team">
+                                                <div class="th-social"><a target="_blank" href="https://facebook.com/"><i
+                                                        class="fab fa-facebook-f"></i></a> <a target="_blank" href="https://twitter.com/"><i
+                                                        class="fab fa-twitter"></i></a> <a target="_blank" href="https://instagram.com/"><i
+                                                        class="fab fa-instagram"></i></a> <a target="_blank" href="https://linkedin.com/"><i
+                                                        class="fab fa-linkedin-in"></i></a></div>
+                                            </div>
+                                            <h3 class="box-title"><a href="#">Gautham</a></h3>
+                                            <p class="box-text">Group Member</p></div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4 col-xl-4">
+                                        <div class="team-card">
+                                            <div class="box-img"><img src="{% static 'img/sanjeevan.jpg' %}" alt="Team">
+                                                <div class="th-social"><a target="_blank" href="https://facebook.com/"><i
+                                                        class="fab fa-facebook-f"></i></a> <a target="_blank" href="https://twitter.com/"><i
+                                                        class="fab fa-twitter"></i></a> <a target="_blank" href="https://instagram.com/"><i
+                                                        class="fab fa-instagram"></i></a> <a target="_blank" href="https://linkedin.com/"><i
+                                                        class="fab fa-linkedin-in"></i></a></div>
+                                            </div>
+                                            <h3 class="box-title"><a href="#">Sanjeevan</a></h3>
+                                            <p class="box-text">Group Member</p></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Add more content related to your teams if needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--End Content-->
+
+<!--Start footer-->
+<footer class="footer-wrapper footer-layout1" data-bg-src="assets/img/bg/footer_bg_1.png">
+    <div class="widget-area">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-6 col-xl-3">
+                    <div class="widget footer-widget">
+                        <div class="th-widget-about">
+                            <p class="about-text">Magazines cover a wide subjects, including not limited to fashion,
+                                lifestyle, health, politics, business, Editorial, sports, science,</p>
+                            <div class="th-social style-black">
+                                <h3 class="widget_title">Contact</h3>
+                                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--category-->
+                <div class="col-md-6 col-xl-auto">
+                    <div class="widget widget_nav_menu footer-widget">
+                        <h3 class="widget_title">Categories</h3>
+                        <div class="menu-all-pages-container">
+                            <ul class="menu">
+                                <li><a href="{% url 'politics' %}">Political</a></li>
+                                <li><a href="{% url 'business' %}">Business</a></li>
+                                <li><a href="#">Health</a></li>
+                                <li><a href="#">Technology</a></li>
+                                <li><a href="{% url 'sports' %}">Sports</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-auto">
+                    <div class="widget widget_nav_menu footer-widget">
+                        <br>
+                        <br>
+                        <!--<h3 class="widget_title">Categories</h3>-->
+                        <div class="menu-all-pages-container">
+                            <ul class="menu">
+                                <li><a href="{% url 'editorial' %}">Editorial</a></li>
+                                <li><a href="{% url 'lifestyle' %}">Lifestyle</a></li>
+                                <li><a href="#">World</a></li>
+                                <li><a href="#">Travel</a></li>
+                                <li><a href="#">Climate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--category-->
+
+                <!--popular tags-->
+                <div class="col-md-6 col-xl-3">
+                    <div class="widget widget_tag_cloud footer-widget">
+                        <h3 class="widget_title">Popular Tags</h3>
+                        <div class="tagcloud"><a href="{% url 'sports' %}">Sports</a>
+                            <a href="{% url 'lifestyle' %}">Lifestyle</a>
+                            <a href="{% url 'business' %}">Business</a>
+                            <a href="{% url 'politics' %}">Politics</a>
+                            <a href="{% url 'editorial' %}">Editorial</a>
+                            <a href="#">Travels</a>
+                            <a href="#">Fashions</a>
+                            <a href="#">Animal</a>
+                            <a href="#">Weather</a>
+                            <a href="#">Movies</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end popular tags-->
+
+            </div>
+        </div>
+    </div>
+    <div class="copyright-wrap">
+        <div class="container">
+            <div class="row jusity-content-between align-items-center">
+                <div class="col-lg-5">
+                    <p class="copyright-text">Copyright <i class="fa-solid fa-at"></i> 2023 <a
+                            href="{% url 'summarize' %}">Echo Express</a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-auto ms-auto d-none d-lg-block">
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="{% url 'summarize' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">About Us</a></li>
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--End footer-->
+
+<!--Start Scroll to top -->
+    <div class="scroll-top"><svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+            </path>
+        </svg></div>
+<!--End Scroll to top -->
+
+<!--    Java Scripts -->
+<script src="{% static 'js/vendor/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'js/app.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/search.js' %}"></script>
+<script src="https://kit.fontawesome.com/3489e66516.js" crossorigin="anonymous"></script>
+</body>
+<!--End Body -->
+
+</html>

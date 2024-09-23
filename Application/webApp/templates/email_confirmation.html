@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Activate your account</title>
+</head>
+<body>
+    <p>Hi {{ user.username }},</p>
+    <p>Thanks for signing up! Please click on the link below to confirm your email address and complete your registration:</p>
+    <p>
+        <a href="http://{{ domain }}{% url 'activate' uidb64=uidb64 token=token %}">
+            Activate your account
+        </a>
+    </p>
+    <p>If you didn't sign up for an account, you can ignore this email.</p>
+</body>
+</html>

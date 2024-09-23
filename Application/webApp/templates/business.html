@@ -1,0 +1,389 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" data-theme="light" lang="en">
+
+<!--Start Head-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Business News</title>
+    <link rel="icon" type="image/png" href="{% static 'img/favicon/logo_black.png' %}">
+    <meta name="author" content="Tnews">
+    <meta name="description" content="Tnews - News & Magazine HTML Template">
+    <meta name="keywords" content="Tnews - News & Magazine HTML Template">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/app.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<!--End Head-->
+
+<!--Start Body -->
+<body>
+
+<!--    Start Preloader-->
+<div class="preloader"><button class="th-btn preloaderCls">Cancel Preloader</button>
+    <div class="preloader-inner"><span class="loader"></span></div>
+</div>
+<!--    end Preloader-->
+
+<!--Start sidemenu-wrapper-->
+<div class="sidemenu-wrapper sidemenu-1 d-none d-md-block">
+    <div class="sidemenu-content"><button class="closeButton sideMenuCls"><i class="fa-regular fa-circle-xmark"></i></i></button>
+        <div class="widget">
+            <div class="th-widget-about">
+                <div class="about-logo"><a href="{% url 'summarize' %}"><img class="light-img"
+                                                                           src="{% static 'img/icon/logo_black.png' %}" alt="Echo Express"></a><a
+                        href="{% url 'summarize' %}"><img class="dark-img" src="{% static 'img/icon/logo_white.png' %}"
+                                                        alt="Echo Express"></a></div>
+                <p class="about-text">Magazines cover a wide subjects, including not limited to fashion, lifestyle,
+                    health, politics, business, Editorial, sports, science,</p>
+                <div class="th-social style-black">
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a></div>
+            </div>
+        </div>
+        
+        <div class="widget newsletter-widget">
+            <h3 class="widget_title">Subscribe</h3>
+            <p class="footer-text">Sign up to get update about us. Don't be hesitate your email is safe.</p>
+            <form class="newsletter-form"><input class="form-control" type="email" placeholder="Enter Email"
+                                                 required=""> <button type="submit" class="icon-btn"><i
+                    class="fa-solid fa-paper-plane"></i></button></form>
+            <div class="mt-30"><input type="checkbox" id="Agree2"> <label for="Agree2">I have read and accept the <a
+                    href="{% url 'about' %}">Terms & Policy</a></label></div>
+        </div>
+    </div>
+</div>
+<!--end sidemenu-wrapper-->
+
+<!--Start PopUp Search Box-->
+<div class="popup-search-box"><button class="searchClose"><i class="fal fa-times"></i></button>
+    <form action="#"><input type="text" placeholder="What are you looking for?"> <button type="submit"><i
+            class="fal fa-search"></i></button></form>
+</div>
+<!--End PopUp Search Box-->
+
+<!--start menu-wrapper-->
+<div class="th-menu-wrapper">
+    <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+        <div class="mobile-logo"><a href="{% url 'summarize' %}"><img src="{% static 'img/icon/logo_black.png' %}" alt="Echo Express"></a></div>
+        <div class="th-mobile-menu">
+            <ul>
+                <a href="{% url 'summarize' %}">Home</a>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li class="menu-item-has-children"><a href="#">Category</a>
+                    <ul class="sub-menu">
+                        <li><a href="{% url 'lifestyle' %}">Lifestyle</a></li>
+                        <li><a href="#">World</a></li>
+                        <li><a href="{% url 'sports' %}">Sports</a></li>
+                        <li><a href="#">Climate</a></li>
+                        <li><a href="{% url 'editorial' %}">Editorial</a></li>
+                        <li><a href="{% url 'politics' %}">Politics</a></li>
+                        <li><a href="#">Travel</a></li>
+                        <li><a href="#">Technology</a></li>
+                        <li><a href="#">Health</a></li>
+                        <li><a href="{% url 'business' %}">Business</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--end menu-wrapper-->
+
+<!--start header-->
+<header class="th-header header-layout1">
+    <div class="header-top">
+        <!--Start Header bar-->
+        <div class="container">
+            <div class="row justify-content-center justify-content-lg-between align-items-center gy-2">
+                <div class="col-auto d-none d-lg-block">
+                    <div class="header-links">
+                        <ul>
+                            <li><img
+                                    class="light-img" src="{% static 'img/icon/logo_black.png' %}" alt="ads"> <img
+                                    class="dark-img" src="{% static 'img/icon/logo_white.png' %}" alt="ads"></li>
+                            <li><i class="fa-solid fa-calendar-days"></i><a href="#">{{ current_date }}</a></li>
+                            <li><a class="theme-toggler" href="#"><span class="dark"><i class="fa-regular fa-sun"></i>Dark
+                                            Mode</span> <span class="light"><i class="fa-solid fa-sun"></i>Light
+                                            Mode</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="header-links">
+                        <ul>
+                            {% if user.is_authenticated %}
+                            <li class="d-none d-sm-inline-block"><i class="far fa-user"></i>Welcome, {{ user.username }}!</li>
+                            <li class="d-none d-sm-inline-block"><a  href="{% url 'signin' %}">Log Out</a></li>
+                            {% else %}
+                            <li class="d-none d-sm-inline-block"><i class="far fa-user"></i><a  href="{% url 'signin' %}">Login / register</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End header bar-->
+    </div>
+
+
+    <!--start nav bar-->
+    <div class="sticky-wrapper">
+        <div class="menu-area">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-auto d-lg-none d-block">
+                        <div class="header-logo"><a href="{% url 'summarize' %}"><img src="{% static 'img/icon/logo_black.png' %}"
+                                                                                    alt="Echo Express"></a></div>
+                    </div>
+                    <div class="col-auto">
+                        <nav class="main-menu d-none d-lg-inline-block">
+                            <ul>
+                                <li><a href="{% url 'summarize' %}">Home</a></li>
+                                <li><a href="{% url 'about' %}">About Us</a></li>
+                                <li class="menu-item-has-children"><a href="#">Category</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="{% url 'lifestyle' %}">Lifestyle</a></li>
+                                        <li><a href="{% url 'sports' %}">Sports</a></li>
+                                        <li><a href="{% url 'editorial' %}">Editorial</a></li>
+                                        <li><a href="{% url 'politics' %}">Politics</a></li>
+                                        <li><a href="{% url 'business' %}">Business</a></li>
+                                    </ul>
+                                </li>
+
+                                <li><a href="{% url 'contact' %}">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-auto">
+                        <div class="header-button">
+                            <div class="header-button">
+                                <a href="#" class="icon-btn sideMenuToggler d-none d-lg-block">
+                                    <i class="fa-solid fa-bars"></i>
+                                </a>
+                                <button type="button" class="th-menu-toggle d-block d-lg-none">
+                                    <i class="far fa-bars"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End nav bar-->
+
+</header>
+<!--end header-->
+
+<!--Start breadcumb wrapper-->
+<div class="breadcumb-wrapper">
+    <div class="container">
+        <ul class="breadcumb-menu">
+            <li><a href="{% url 'summarize' %}">Home</a></li>
+            <li>Business</li>
+        </ul>
+    </div>
+</div>
+<!--End breadcumb wrapper-->
+
+<!--Start Content-->
+<section class="space-top space-extra-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-xxl-9 col-lg-8">
+                <div class="mb-30">
+                    {% for summary in summaries %}
+                        {% if summary.category == 'Business' %}
+                            <div class="border-blog2">
+                                <div class="blog-style4">
+                                    {% if summary.img %}
+                                    <div class="blog-img w-386"><img src="{{ summary.img }}" alt="blog image">
+                                    </div>
+                                    {% endif %}
+                                    <div class="blog-content"><a data-theme-color="#FF9500" href="{% url 'editorial' %}" class="category">{{summary.category}}</a>
+                                        <h3 class="box-title-30"><a class="hover-line" href="{{ summary.url }}">{{ summary.title}}</a></h3>
+                                        <p class="blog-text">{{ summary.summary }}</p>
+                                        {% if user.is_authenticated %}
+                                            {% if summary.url %}
+                                                <a href="{{ summary.url }}" target="_blank">View More</a>
+                                            {% endif %}
+                                        {% else %}
+                                            <a href="{% url 'signin' %}">View More</a>
+                                        {% endif %}
+                                        <div class="blog-meta"><a href="#"><i class="far fa-user"></i>By - Echo Express</a>
+                                            <a href="{% url 'summarize' %}"><i class="fa-solid fa-calendar-days"></i>{{summary.date}}</a>
+                                        </div>
+                                        <div class="like" style="display: flex; margin-top: 20px;">
+                                            <i class="fa-regular fa-thumbs-up" style="font-size: 30px; cursor: pointer;" onmouseover="this.style.color='red'"
+                                            onmouseout="this.style.color='#54595F'"></i>
+                                            <p style="margin-left: 10px;">count</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!--sarch category-->
+            <div class="col-xxl-3 col-lg-4 sidebar-wrap">
+                <aside class="sidebar-area">
+                    <div class="widget widget_search">
+                    </div>
+                    <div class="widget widget_categories"><h3 class="widget_title">Categories</h3>
+                        <ul>
+                            <li><a data-bg-src="assets/img/bg/category_bg_1_1.jpg" href="{% url 'lifestyle' %}">Lifestyle</a></li>
+                            <li><a data-bg-src="assets/img/bg/category_bg_1_3.jpg" href="{% url 'sports' %}">Sports</a></li>
+                            <li><a data-bg-src="assets/img/bg/category_bg_1_6.jpg" href="{% url 'business' %}">Business</a>
+                            <li><a data-bg-src="assets/img/bg/category_bg_1_3.jpg" href="{% url 'politics' %}">Politics</a></li>
+                            <li><a data-bg-src="assets/img/bg/category_bg_1_4.jpg" href="{% url 'editorial' %}">Editorial</a></li>
+                            <li><a data-bg-src="assets/img/bg/category_bg_1_5.jpg" href="#">Technology</a></li>
+                            <li><a data-bg-src="assets/img/bg/category_bg_1_6.jpg" href="#">Travel</a></li>
+                        </ul>
+                    </div>
+                    <div class="widget widget_tag_cloud"><h3 class="widget_title">Popular Tags</h3>
+                        <div class="tagcloud"><a href="{% url 'sports' %}">Sports</a> <a href="{% url 'politics' %}">Politics</a> <a
+                                href="{% url 'business' %}">Business</a> <a href="{% url 'summarize' %}">Music</a>
+                            <a href="{% url 'summarize' %}">Technology</a> <a href="{% url 'summarize' %}">Travels</a> <a href="{% url 'summarize' %}">Health</a>
+                            <a href="{% url 'summarize' %}">Weather</a> <a href="{% url 'lifestyle' %}">Lifestyle</a><a href="{% url 'summarize' %}">World</a>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!--End Content-->
+
+<!--footer-->
+<footer class="footer-wrapper footer-layout1" data-bg-src="assets/img/bg/footer_bg_1.png">
+    <div class="widget-area">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-md-6 col-xl-3">
+                    <div class="widget footer-widget">
+                        <div class="th-widget-about">
+                            <p class="about-text">Magazines cover a wide subjects, including not limited to fashion,
+                                lifestyle, health, politics, business, Editorial, sports, science,</p>
+                            <div class="th-social style-black">
+                                <h3 class="widget_title">Contact</h3>
+                                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--category-->
+                <div class="col-md-6 col-xl-auto">
+                    <div class="widget widget_nav_menu footer-widget">
+                        <h3 class="widget_title">Categories</h3>
+                        <div class="menu-all-pages-container">
+                            <ul class="menu">
+                                <li><a href="#">Political</a></li>
+                                <li><a href="{% url 'business' %}">Business</a></li>
+                                <li><a href="#">Health</a></li>
+                                <li><a href="#">Technology</a></li>
+                                <li><a href="{% url 'sports' %}">Sports</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-auto">
+                    <div class="widget widget_nav_menu footer-widget">
+                        <br>
+                        <br>
+                        <!--<h3 class="widget_title">Categories</h3>-->
+                        <div class="menu-all-pages-container">
+                            <ul class="menu">
+                                <li><a href="{% url 'editorial' %}">Editorial</a></li>
+                                <li><a href="{% url 'lifestyle' %}">Lifestyle</a></li>
+                                <li><a href="#">World</a></li>
+                                <li><a href="#">Travel</a></li>
+                                <li><a href="#">Climate</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--category-->
+
+                <!--popular tags-->
+                <div class="col-md-6 col-xl-3">
+                    <div class="widget widget_tag_cloud footer-widget">
+                        <h3 class="widget_title">Popular Tags</h3>
+                        <div class="tagcloud"><a href="{% url 'sports' %}">Sports</a>
+                            <a href="{% url 'lifestyle' %}">Lifestyle</a>
+                            <a href="{% url 'business' %}">Business</a>
+                            <a href="{% url 'politics' %}">Politics</a>
+                            <a href="{% url 'editorial' %}">Editorial</a>
+                            <a href="#">Travels</a>
+                            <a href="#">Fashions</a>
+                            <a href="#">Animal</a>
+                            <a href="#">Weather</a>
+                            <a href="#">Movies</a>
+                        </div>
+                    </div>
+                </div>
+                <!--end popular tags-->
+
+            </div>
+        </div>
+    </div>
+    <div class="copyright-wrap">
+        <div class="container">
+            <div class="row jusity-content-between align-items-center">
+                <div class="col-lg-5">
+                    <p class="copyright-text">Copyright <i class="fa-solid fa-at"></i> 2023 <a
+                            href="{% url 'summarize' %}">Echo Express</a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-auto ms-auto d-none d-lg-block">
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="{% url 'summarize' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">About Us</a></li>
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--End footer-->
+
+<!--Start Scroll to top -->
+<div class="scroll-top"><svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+    <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+          style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+    </path>
+</svg></div>
+<!--End Scroll to top -->
+
+<!--    Java Scripts -->
+<script src="{% static 'js/vendor/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'js/app.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="https://kit.fontawesome.com/3489e66516.js" crossorigin="anonymous"></script>
+</body>
+<!--End Body -->
+
+</html>
